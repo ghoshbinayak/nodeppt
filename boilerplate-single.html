@@ -129,6 +129,9 @@
       .mono {
         font-family: monospace;
       }
+      .inventor {
+        width: 50%;
+      }
     </style>
   </head>
   <body onload="var slideshow = remark.create();">
@@ -158,7 +161,7 @@
     console.log('Hi folks');
     ---
     #A bit of history..
-    ![Brendan Eich](Brendan_Eich.jpg)
+    <img alt="Brendan Eich" src="Brendan_Eich.jpg" style="width: 30%; float: left; padding: 10px"/>
     JavaScript was originally developed in 10 days in May 1995 by .highlight[Brendan Eich], while he was working for .highlight[Netscape Communications Corporation]. 
     The language was officially called .highlight[LiveScript] when it first shipped in beta releases of Netscape Navigator 2.0 in September 1995, but it was renamed JavaScript in the final release.
     Microsoft released .highlight[JScript] on July 1996 which was a port of Netscape's JavaScript and was part of Internet Explorer 3.
@@ -222,6 +225,9 @@
 
     ####2. Event loop
     Node.js registers itself with the operating system so that it is notified when a connection is made, and the operating system will issue a callback. Within the Node.js runtime, each connection is a small heap allocation. Traditionally, relatively heavyweight OS processes or threads handled each connection. Node.js uses an event loop for scalability, instead of processes or threads. In contrast to other event-driven servers, Node.js's event loop does not need to be called explicitly. Instead callbacks are defined, and the server automatically enters the event loop at the end of the callback definition. Node.js exits the event loop when there are no further callbacks to be performed.
+
+    ---
+    ##Features
 
     ####3. Unified API
     Node.js can be combined with a browser, a document database (such as MongoDB or CouchDB) and JSON for a unified JavaScript development stack(e.g., .highlight[electron]). With the adaptation of what were essentially server-side development patterns like MVC, MVP, MVVM, etc., Node.js allows the reuse of the same model and service interface between client-side and server-side.
